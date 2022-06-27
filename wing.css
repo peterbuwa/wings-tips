@@ -163,10 +163,14 @@
 
         /* .container-ten-starts-here */
 
-.container-ten table th{text-transform: uppercase; font-size: 12px; text-align: center; background-color: black; color: blanchedalmond;}
-.container-ten table {width:100%;}
+.container-ten table th{padding:3px 0;text-transform: uppercase; font-size: 12px; text-align: center; background-color: blanchedalmond; color: black;}
+.container-ten table {width:100%; font-family: Arial, Helvetica, sans-serif;}
 .container-ten table caption {color:white; font-size: 20px;}
-.container-ten-wrapper {background-color: hsl(60, 23%, 5%);}
+.container-ten-wrapper {background-color: hsl(60, 23%, 5%); width:100%; padding: 40px 0;}
+.container-ten table td  {background-color:black; color:white; font-size: 12px; text-align: center; padding:5px 0;}
+.container-ten table .status-won {background-color: blanchedalmond; color: green; font-weight: bold;}
+.container-ten {padding:20px 0;}
+
 
 
 
