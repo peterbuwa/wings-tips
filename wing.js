@@ -7,6 +7,8 @@ let free = document.querySelector(".free")
 let vip = document.querySelector(".vip")
 let left = document.querySelector(".left-icon");
 let right = document.querySelector(".right-icon");
+ let viewMore = document.querySelector(".view-more")
+ let containerElevenWrapper = document.querySelector(".container-eleven-wrapper")
 
 
 bars.addEventListener("click", function () {
@@ -241,6 +243,63 @@ const ticketAchieved = [
     }
 ];
 
+const ticketAchievedOne = [
+    {
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    },  
+    { 
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    },   
+    {
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    },
+    {    
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    },
+    {
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    },
+    {   
+        home: "liverpool",
+        away: "chelsea",
+        pick: "1",
+        odd: "2.00",
+        result: "2-0",
+        status: "won",
+        date: "10-12-2022",
+    }
+];
+
 let tableData = ticketAchieved.map((table)=>{
     return `
     <div class="container-ten">
@@ -298,3 +357,67 @@ let tableData = ticketAchieved.map((table)=>{
 
 let containerTenWrapper = document.querySelector(".container-ten-wrapper")
 containerTenWrapper.innerHTML = `${tableData.join(" ")}`;
+
+
+let tableDateOne = ticketAchievedOne.map((table)=>{
+    return `
+    <div class="container-ten">
+    <table>
+        <caption>TOTAL ODD: 150</caption>
+        <tr>
+            <th>date</th>
+            <th>home</th>
+            <th>away</th>
+            <th>pick</th>
+            <th>odd</th>
+            <th>result</th>
+            <th>status</th>
+        </tr>
+        <tr>
+            <td>${table.date}</td>
+            <td>${table.home}</td>
+            <td>${table.away}</td>
+            <td>${table.pick}</td>
+            <td>${table.odd}</td>
+            <td>${table.result}</td>
+            <td class="status-won">${table.status}</td>
+        </tr>
+        <tr>
+            <td>${table.date}</td>
+            <td>${table.home}</td>
+            <td>${table.away}</td>
+            <td>${table.pick}</td>
+            <td>${table.odd}</td>
+            <td>${table.result}</td>
+        <td class="status-won">${table.status}</td>
+        </tr>
+        <tr>
+            <td>${table.date}</td>
+            <td>${table.home}</td>
+            <td>${table.away}</td>
+            <td>${table.pick}</td>
+            <td>${table.odd}</td>
+            <td>${table.result}</td>
+            <td class="status-won">${table.status}</td>
+        </tr>
+        <tr>
+            <td>${table.date}</td>
+            <td>${table.home}</td>
+            <td>${table.away}</td>
+            <td>${table.pick}</td>
+            <td>${table.odd}</td>
+            <td>${table.result}</td>
+            <td class="status-won">${table.status}</td>
+        </tr>
+    </table>
+</div>
+    `
+})
+
+let containerTwelve = document.querySelector(".container-twelve-wrapper");
+containerTwelve.innerHTML = tableDateOne.join(" ");
+
+viewMore.addEventListener("click", ()=>{
+    containerTwelve.style.display = "block";
+    containerElevenWrapper.style.display = "none";
+})
