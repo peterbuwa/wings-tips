@@ -415,7 +415,8 @@ let tableDateOne = ticketAchievedOne.map((table)=>{
 })
 
 let containerTwelve = document.querySelector(".container-twelve-wrapper");
-containerTwelve.innerHTML = tableDateOne.join(" ");
+let containerTwelves = document.querySelector(".container-twelve");
+containerTwelves.innerHTML = tableDateOne.join(" ");
 
 viewMore.addEventListener("click", ()=>{
     containerTwelve.style.display = "block";
