@@ -151,10 +151,28 @@ var x = setInterval(() => {
 }, 1000);
 
 
-var countDownDatesOne = new Date("July 1, 2022 15:37:25").getTime();
+var countDownDatesOne = new Date("oct 5, 2022 15:37:25").getTime();
 var x = setInterval(() => {
     var now = new Date().getTime();
     var distance = countDownDatesOne - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("time-out-three").innerHTML = days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("time-out-three").innerHTML = "Inplay";
+    }
+}, 1000);
+
+
+var countDownDatesOnes = new Date("oct 5, 2022 15:37:25").getTime();
+var x = setInterval(() => {
+    var now = new Date().getTime();
+    var distance = countDownDatesOnes - now;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -168,7 +186,7 @@ var x = setInterval(() => {
     }
 }, 1000);
 
-var countDownDatesTwo = new Date("July 1, 2022 15:37:25").getTime();
+var countDownDatesTwo = new Date("oct 5, 2022 15:37:25").getTime();
 var x = setInterval(() => {
     var now = new Date().getTime();
     var distance = countDownDatesTwo - now;
@@ -177,11 +195,11 @@ var x = setInterval(() => {
     var minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("time-out-three").innerHTML = days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
+    document.getElementById("time-out-five").innerHTML = days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("time-out-three").innerHTML = "Inplay";
+        document.getElementById("time-out-five").innerHTML = "Inplay";
     }
 }, 1000);
 
